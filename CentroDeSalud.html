@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Centro Serena — Salud Mental</title>
+  <style>
+    :root{
+      --bg:#f6f8f9;
+      --accent:#9ed6d0;
+      --muted:#7a8a90;
+      --card:#ffffff;
+      --maxw:1100px;
+      --radius:14px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:#123;line-height:1.45}
+    .wrap{max-width:var(--maxw);margin:28px auto;padding:28px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:52px;height:52px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#d3eaf0);display:flex;align-items:center;justify-content:center;font-weight:700;color:#044;border:2px solid rgba(0,0,0,0.04)}
+    nav{display:flex;gap:18px}
+    nav a{color:var(--muted);text-decoration:none;font-weight:600}
+    nav a:hover{color:#0b5960}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;margin-top:22px}
+    .hero h1{font-size:34px;margin:0}
+    .lead{color:var(--muted);margin-top:8px}
+    .cta{display:inline-block;margin-top:16px;padding:10px 18px;border-radius:10px;background:#fff;border:1px solid rgba(0,0,0,0.06);cursor:pointer}
+    .cta.primary{background:linear-gradient(90deg,var(--accent),#bfeae4);border:none}
+
+    .card{background:var(--card);border-radius:var(--radius);padding:14px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+    .hero .card img{width:100%;height:180px;object-fit:cover;border-radius:10px}
+
+    /* Sections */
+    section{margin-top:36px}
+    .grid-3{display:grid;grid-template-columns:1fr 420px;gap:28px}
+    h2{margin:0 0 10px 0}
+    .muted{color:var(--muted)}
+
+    /* Services layout */
+    .services{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start}
+    .service-list{list-style:none;padding:0;margin:0}
+    .service-list li{margin-bottom:18px}
+    .pill{display:inline-block;padding:8px 12px;border-radius:999px;background:rgba(9,90,95,0.06);font-weight:600}
+
+    /* Resources */
+    .links{display:flex;gap:24px;align-items:flex-start}
+    .video-box{width:360px;height:190px;border-radius:12px;background:#222;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;letter-spacing:0.6px}
+    .video-box.small{width:260px;height:140px}
+
+    /* Footer */
+    footer{margin-top:48px;border-top:1px dashed rgba(0,0,0,0.06);padding-top:18px;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;align-items:center}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr}
+      .card{padding:12px}
+      .services,.grid-3{grid-template-columns:1fr}
+      .video-box{width:100%;height:200px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">CS</div>
+        <div>
+          <div style="font-weight:700">Centro Serena</div>
+          <div style="font-size:13px;color:var(--muted)">Salud Mental</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#quienes">¿Quiénes somos?</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#recursos">Recursos</a>
+      </nav>
+    </header>
+
+    <main id="inicio">
+      <section class="hero">
+        <div>
+          <h1>Centro Serena — <span style="color:#0b5960">Salud Mental</span></h1>
+          <p class="lead">Acompañamiento profesional, humano y accesible. Promovemos el bienestar emocional con terapias basadas en evidencia.</p>
+          <a class="cta primary" href="#servicios">Ver servicios</a>
+          <p class="muted" style="margin-top:18px">Ambientes tranquilos, accesibles y pensados para tu comodidad y seguridad.</p>
+        </div>
+
+        <aside class="card">
+          <!-- placeholder image -->
+          <img alt="Sala tranquila" src="html/terapia", svg xmlns='html/terapia' width='800' height='400'><rect width='100%' height='100%' fill='%23e6f6f3'/><g fill='%2390cfc6'><rect x='40' y='40' width='720' height='320' rx='12'/></g><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='22' fill='%23006' >Imagen de sala - Centro Serena</text></svg>" />
+          <h3 style="margin-top:12px">Acompañamiento profesional</h3>
+          <p class="muted">Psicoterapia individual, de pareja y familiar con un enfoque centrado en la persona.</p>
+        </aside>
+      </section>
+
+      <section id="quienes">
+        <div class="grid-3">
+          <div>
+            <h2>¿Quiénes somos?</h2>
+            <p class="muted">Somos un equipo interdisciplinario comprometido con el acceso a la salud mental de calidad. Ofrecemos atención cálida, inclusiva y basada en evidencia, adaptada a cada persona.</p>
+            <ul style="margin-top:14px;color:var(--muted)">
+              <li><strong>Misión</strong> — Brindar atención psicológica cálida, inclusiva y basada en evidencia.</li>
+              <li style="margin-top:8px"><strong>Visión</strong> — Ser un referente de bienestar emocional en la comunidad.</li>
+            </ul>
+          </div>
+
+          <aside class="card">
+            <img alt="Perfil" src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='200'><rect width='100%' height='100%' fill='%23f3faf9'/><text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='18' fill='%23066'>Imagen perfil</text></svg>" style="width:100%;height:120px;object-fit:cover;border-radius:8px"/>
+            <h3 style="margin-top:12px">Valores</h3>
+            <ul class="muted" style="padding-left:18px;margin-top:8px">
+              <li><strong>Empatía</strong> — Escucha activa y respeto por cada historia.</li>
+              <li><strong>Inclusión</strong> — Espacios seguros para todas las personas.</li>
+              <li><strong>Ética</strong> — Confidencialidad y trato profesional.</li>
+              <li><strong>Evidencia</strong> — Intervenciones con sustento científico.</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section id="servicios">
+        <div style="display:flex;align-items:center;justify-content:space-between">
+          <h2>Servicios</h2>
+          <span class="pill">Programas personalizados</span>
+        </div>
+
+        <div class="services">
+          <div>
+            <ul class="service-list">
+              <li>
+                <h3>Psicoterapia individual</h3>
+                <p class="muted">Sesiones de 50 minutos enfocadas en tus metas personales.</p>
+              </li>
+              <li>
+                <h3>Grupos y talleres</h3>
+                <p class="muted">Habilidades socioemocionales, manejo de estrés y autocuidado.</p>
+              </li>
+              <li>
+                <h3>Atención en línea</h3>
+                <p class="muted">Consultas remotas con la misma calidad y confidencialidad.</p>
+              </li>
+            </ul>
+          </div>
+
+          <aside class="card" style="text-align:center">
+            <div class="video-box">THIS CONTENT IS NOT AVAILABLE</div>
+            <p class="muted" style="margin-top:12px">Relájate un momento — Una pausa consciente puede cambiar tu día.</p>
+            <a href="#recursos" class="cta" style="display:inline-block;margin-top:12px">Ver recursos</a>
+          </aside>
+        </div>
+      </section>
+
+      <section id="recursos">
+        <h2>Recursos y enlaces</h2>
+        <p class="muted">Guías, artículos y contenido para acompañarte.</p>
+
+        <div style="display:flex;gap:24px;margin-top:18px;flex-wrap:wrap">
+          <div style="flex:1;min-width:220px">
+            <h4>Artículos recomendados</h4>
+            <ul style="color:var(--muted);padding-left:18px">
+              <li><a href="#">OMS — Salud mental</a></li>
+              <li><a href="#">UNICEF — Salud mental</a></li>
+              <li><a href="#">Psychology Today (EN)</a></li>
+            </ul>
+          </div>
+
+          <div style="flex:1;min-width:260px">
+            <h4>Video informativo</h4>
+            <iframe src="d:\302\html\Qué es la salud mental y cómo podemos cuidarla.mp4">Video no disponible</iframe>
+          </div>
+
+          <div style="flex:1;min-width:220px">
+            <h4>Contacto</h4>
+            <p class="muted">Escríbenos a <a href="mailto:hola@centroserena.org">hola@centroserena.org</a> o llámanos al <a href="tel:+5215555555555">+52 1 55 5555 5555</a>.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:28px;text-align:center">
+          <div class="card" style="display:inline-block;padding:18px;max-width:720px">
+            <iframe src="d:\302\html\Cap. 1_ ¿Qué es la salud mental_.mp4">THIS CONTENT IS NOT AVAILABLE</iframe>
+            <p class="muted" style="margin-top:12px">Eres suficiente. Un día a la vez.</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div>© 2025 Centro Serena — Salud Mental</div>
+      <div style="color:var(--muted)">Diseño simple — prueba abriendo este archivo en tu navegador</div>
+    </footer>
+  </div>
+
+</body>
+</html>
